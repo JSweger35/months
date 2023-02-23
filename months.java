@@ -1,33 +1,32 @@
-
 /**
- * Write a description of class months here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Enumeration class Planet - lists the planets of the solar system and 
+ * their weight multiples relative to Earth.
+ * 
+ * @author Merrill Hall
+ * @version 1.0
  */
-public class months
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public enum months {
+    MERCURY (0.378),
+    VENUS   (0.907),
+    EARTH   (1.0),
+    MARS    (0.377),
+    JUPITER (2.364),
+    SATURN  (0.916),
+    URANUS  (0.889),
+    NEPTUNE (1.125),
+    PLUTO   (0.067);
 
-    /**
-     * Constructor for objects of class months
-     */
-    public months()
-    {
-        // initialise instance variables
-        x = 0;
+    private double relativeWeight;   // multiple to obtain weight
+
+    private months(double relativeWeight) {
+        this.relativeWeight = relativeWeight;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    private double getRelativeWeight() { 
+        return relativeWeight;
+    }
+
+    public double getWeight(double weight) {
+        return weight * relativeWeight;
     }
 }
