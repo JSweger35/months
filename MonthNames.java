@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Jake Sweger
  * @version 1.0
  */
-public class PlanetaryWeights {
+public class MonthNames {
     public static void main(String[] args) {
         double earthWeight = 0;
         Scanner in = new Scanner(System.in);
