@@ -9,15 +9,15 @@ import java.util.Scanner;
  */
 public class MonthNames {
     public static void main(String[] args) {
-        double earthWeight = 0;
+        double numericMonth = 0;
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Enter your weight on Earth: ");
+        System.out.print("Enter your numberic month: ");
         if (in.hasNextDouble()) {
-            earthWeight = in.nextDouble();
+            numericMonth = in.nextDouble();
             for (months p : months.values())
                 System.out.println("Your weight on " + p + " is " +
-                                    p.getWeight(earthWeight));
+                                    p.getWeight(numericMonth));
         }
         else {
             System.out.println(in.next() + " is not a valid number.");
